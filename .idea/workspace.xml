@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="bb2659b5-5328-4d41-855a-aede7651ad6b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Revision.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Revision.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Revision/ch/hesge/cours634/counter/UpperLimitedPositiveCounter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Revision/ch/hesge/cours634/counter/UpperLimitedPositiveCounter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch.hesge.cours634.counter/Counter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch.hesge.cours634.counter/Counter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch.hesge.cours634.counter/UpperLimitedPositiveCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch.hesge.cours634.counter/UpperLimitedPositiveCounter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ch/hesge/cours634/counter/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ch/hesge/cours634/counter/Main.java" afterDir="false" />
@@ -23,6 +24,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -34,20 +36,32 @@
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ch.hesge.cours634.counter" />
+    </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="ch.hesge.cours634.counter" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/test/java/ch/hesge/cours634/counter" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java/ch/hesge/cours634/counter" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -62,7 +76,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="JUnit.UpperLimitedPositiveCounterTest.inc">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ch.hesge.cours634.counter.Main" />
       <module name="Revision" />
@@ -86,8 +100,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UpperLimitedPositiveCounterTest.inc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Revision" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch.hesge.cours634.counter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ch.hesge.cours634.counter" />
+      <option name="MAIN_CLASS_NAME" value="ch.hesge.cours634.counter.UpperLimitedPositiveCounterTest" />
+      <option name="METHOD_NAME" value="inc" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UpperLimitedPositiveCounterTest.inc" />
         <item itemvalue="Application.Main (1)" />
       </list>
     </recent_temporary>
@@ -106,6 +137,8 @@
       <workItem from="1582088644937" duration="194000" />
       <workItem from="1582089474125" duration="35000" />
       <workItem from="1582363085537" duration="1784000" />
+      <workItem from="1582453113509" duration="4000" />
+      <workItem from="1582529080974" duration="3655000" />
     </task>
     <servers />
   </component>
@@ -117,7 +150,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

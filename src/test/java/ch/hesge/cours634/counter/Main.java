@@ -2,51 +2,32 @@ package ch.hesge.cours634.counter;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CounterException {
+        testCounter();
+    }
 
+    private static void testCounter() throws CounterException {
         Counter simpleCounter = new Counter(0);
-        UpperLimitedPositiveCounter advancedCounter = new UpperLimitedPositiveCounter(0, 7);
 
-        System.out.println("Valeur compteur simple : " + simpleCounter.getValue());
-        System.out.println("Valeur compteur avancé : " + advancedCounter.getValue());
-
-        System.out.println("Incrémentation normale ...");
-        try
+        if(simpleCounter.getValue() != 0)
         {
-            simpleCounter.inc();
-            advancedCounter.inc();
-        }
-        catch (CounterException e)
-        {
-            e.printStackTrace();
+            throw new IllegalArgumentException("Test constructor failed");
         }
 
-        System.out.println("Valeur compteur simple : " + simpleCounter.getValue());
-        System.out.println("Valeur compteur avancé : " + advancedCounter.getValue());
+        simpleCounter = new Counter(0);
+        simpleCounter.inc();
 
-        System.out.println("Incémentation de 5 avec step()");
-        try
+        if(simpleCounter.getValue() != 1)
         {
-            simpleCounter.add(5);
-            advancedCounter.add(5);
-        }
-        catch (CounterException e)
-        {
-            e.printStackTrace();
+            throw new IllegalArgumentException("Test inc() failed");
         }
 
-        System.out.println("Valeur compteur simple : " + simpleCounter.getValue());
-        System.out.println("Valeur compteur avancé : " + advancedCounter.getValue());
+        simpleCounter = new Counter(0);
+        simpleCounter.add(5);
 
-        System.out.println("Déclenchement des exceptions ...");
-        try
+        if(simpleCounter.getValue() != 5)
         {
-            advancedCounter.add(9);
-            simpleCounter.add(-5);
-        }
-        catch (CounterException e)
-        {
-            e.printStackTrace();
+            throw new IllegalArgumentException("Test add() failed");
         }
     }
 }

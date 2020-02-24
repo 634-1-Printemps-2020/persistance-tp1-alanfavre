@@ -1,38 +1,50 @@
 package ch.hesge.cours634.counter;
 
 public class UpperLimitedPositiveCounter extends Counter {
+    private int max;
 
-    private int value = 0;
-    private int maxStep = 0;
-
-    public UpperLimitedPositiveCounter(int value, int maxStep)
+    public UpperLimitedPositiveCounter(int value, int max)
     {
-        this.value = value;
-        this.maxStep = maxStep;
-    }
-
-    @Override
-    public void add(int step) throws CounterException
-    {
-        if (step < 0 || step > this.maxStep)
-        {
-            throw new CounterException("La valeur doit être comprise entre 0 et " + this.maxStep);
-        }
-        else
-        {
-            this.value += step;
-        }
+        super(value);
+        this.max = max;
     }
 
     @Override
     public void inc() throws CounterException
     {
-        this.value++;
+        checkMax(1);
+
+        super.inc();
     }
 
     @Override
-    public int getValue()
+    public void add(int step) throws CounterException
     {
-        return this.value;
+        checkMax(step);
+        checkPositive(step);
+
+        super.add(step);
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Valeur : " + getValue() + " | Maximum : " + this.max;
+    }
+
+    private void checkMax(int step) throws CounterException
+    {
+        if(getValue() + step > this.max)
+        {
+            throw new CounterException("Valeur maximale atteinte.");
+        }
+    }
+
+    private void checkPositive(int step) throws CounterException
+    {
+        if(getValue() + step < 0)
+        {
+            throw new CounterException("Le compteur ne peut pas être négatif.");
+        }
     }
 }
